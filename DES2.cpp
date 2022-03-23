@@ -1,10 +1,18 @@
 /*
+ * @Descripttion: 
+ * @version: 
+ * @Author: MuzhiYing
+ * @Date: 2022-03-23 16:39:46
+ * @LastEditors: MuzhiYing
+ * @LastEditTime: 2022-03-23 16:39:47
+ */
+/*
  * @Descripttion: refer to "密码编码与信息安全:C++实践"
  * @version: 
  * @Author: MuzhiYing
  * @Date: 2022-03-23 14:36:55
  * @LastEditors: MuzhiYing
- * @LastEditTime: 2022-03-23 16:40:16
+ * @LastEditTime: 2022-03-23 16:09:42
  */
 
 #include <iostream>
@@ -31,6 +39,13 @@ public:
 	void decryption();                  // 用于解密函数
 	void showBinary(unsigned long long num);    // 将数据以二进制形式显示的函数，用于检查数据计算过程
 	void showResult();                  // 用于显示解密，解密结果的函数
+    string text;
+	void getPlainText(){
+		cout<<"using 8 characters, input ur cipherText:\t"<<text<<endl;
+	}
+	void getDeCipherText(){
+		cout<<"using 8 characters, input ur deCipherText:\t"<<decipherText<<endl;
+	}
 private:
 	unsigned long long keyShift(unsigned long long k, int n);
 	unsigned long long key;             // 输入的密钥
@@ -304,11 +319,37 @@ int main(int argc, char const *argv[])
 {
     DES des;
     des.setKey("01234567");
-	des.setPlainText("76543210");
-	des.genEncKey();
-	des.encryption();
-	des.decryption();
-    des.showResult();
+    int i = 0;
+    do {
+        cout << "[0] exit;\n[1] example\n[2] get your cipherText\n[3] get your decipherText" << endl;
+        cin >> i;
+        if (i == 0)
+        {
+            cout << "thanks for ur using, bye";
+        }
+        else if (i == 1){
+	        des.setPlainText("76543210");
+	        des.genEncKey();
+	        des.encryption();
+	        des.decryption();
+            des.showResult();
+        }else if (i == 2){
+            des.getPlainText();
+            des.setPlainText(des.text);
+	        des.genEncKey();
+	        des.encryption();
+	        des.decryption();
+            des.showResult();
+        }else if (i == 3){
+
+        }else{
+            cout << "illegal, bye";
+            break;
+        }
+        
+    }while (i);
+
+    
 	return 0;
 }
 
