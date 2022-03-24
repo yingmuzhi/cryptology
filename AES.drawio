@@ -1,1 +1,188 @@
-<mxfile host="app.diagrams.net" modified="2022-03-23T13:23:14.729Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" version="17.1.0" etag="kwShxHmvR89vLZmZyq5o" type="github"><diagram id="cqzonG41QX5fW-I68F4_">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-03-24T07:24:45.434Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" etag="grCnGFbhgrkTt410tQ3S" version="17.1.0" type="github">
+  <diagram id="cqzonG41QX5fW-I68F4_" name="Page-1">
+    <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--1" value="初始变换&lt;br&gt;1次轮密钥加XOR&lt;br&gt;128bit-&amp;gt;128bit(变成矩阵形式)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--2" value="加密过程，以输入128bit plainText，128bit key为例" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="40" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--3" target="-XoX3T9-vUoqO6nSMwP--14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--3" value="9轮轮循环" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--5" target="-XoX3T9-vUoqO6nSMwP--6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--5" value="字节代换&lt;br&gt;S盒字节变换&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--6" target="-XoX3T9-vUoqO6nSMwP--7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--6" value="行移位&lt;br&gt;按字节循环移位&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="280" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--7" target="-XoX3T9-vUoqO6nSMwP--8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--7" value="列混合&lt;br&gt;左乘一个固定矩阵，相乘再相加，根据01,02,03具有不同情况&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--8" value="轮密钥加&lt;br&gt;与密钥异或&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--9" target="-XoX3T9-vUoqO6nSMwP--10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--9" value="字节代换&lt;br&gt;S盒字节变换&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--10" target="-XoX3T9-vUoqO6nSMwP--12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--10" value="行移位&lt;br&gt;按字节循环移位&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--12" value="轮密钥加&lt;br&gt;128bit-&amp;gt;128bit" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="363" y="810" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--1" target="-XoX3T9-vUoqO6nSMwP--3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="160" as="sourcePoint" />
+            <mxPoint x="450" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--14" value="&lt;span&gt;1轮最终变换&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="710" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--16" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--3" target="-XoX3T9-vUoqO6nSMwP--5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="390" as="sourcePoint" />
+            <mxPoint x="450" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--17" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--3" target="-XoX3T9-vUoqO6nSMwP--8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="500" as="sourcePoint" />
+            <mxPoint x="450" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--21" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--14" target="-XoX3T9-vUoqO6nSMwP--9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="660" as="sourcePoint" />
+            <mxPoint x="450" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--22" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--14" target="-XoX3T9-vUoqO6nSMwP--12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="660" as="sourcePoint" />
+            <mxPoint x="450" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--25" value="w[i] = T(W[i-1]) XOR w[i-4]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="585" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--26" value="T(W[i-1])" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--27" value="生成子密钥过程" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--28" value="若生成的word是不是4的倍数" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="235" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--29" value="w[i] = w[i-1] XOR w[i-4]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--30" target="-XoX3T9-vUoqO6nSMwP--31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--30" value="字循环" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="305" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--31" target="-XoX3T9-vUoqO6nSMwP--32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--31" value="字节代换&lt;br&gt;用S盒" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="405" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--32" value="轮常量异或" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="505" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--33" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--26" target="-XoX3T9-vUoqO6nSMwP--30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="385" as="sourcePoint" />
+            <mxPoint x="750" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--34" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--26" target="-XoX3T9-vUoqO6nSMwP--32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="475" as="sourcePoint" />
+            <mxPoint x="750" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--40" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--28" target="-XoX3T9-vUoqO6nSMwP--26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="475" as="sourcePoint" />
+            <mxPoint x="920" y="385" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1020" y="385" />
+              <mxPoint x="920" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--41" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--28" target="-XoX3T9-vUoqO6nSMwP--29">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="425" as="sourcePoint" />
+            <mxPoint x="1090" y="335" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1020" y="385" />
+              <mxPoint x="1130" y="385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--42" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--26" target="-XoX3T9-vUoqO6nSMwP--25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="575" as="sourcePoint" />
+            <mxPoint x="950" y="525" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--43" target="-XoX3T9-vUoqO6nSMwP--28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--43" value="4Byte" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="150" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--44" value="44Byte" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="745" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--25" target="-XoX3T9-vUoqO6nSMwP--44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="685" as="sourcePoint" />
+            <mxPoint x="950" y="635" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="920" y="705" />
+              <mxPoint x="1020" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XoX3T9-vUoqO6nSMwP--46" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="-XoX3T9-vUoqO6nSMwP--29" target="-XoX3T9-vUoqO6nSMwP--44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="685" as="sourcePoint" />
+            <mxPoint x="950" y="635" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1130" y="705" />
+              <mxPoint x="1020" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
